@@ -1,0 +1,11 @@
+{%extends "chatgpteg/base.html"%}
+{%block title%}Login{%endblock%}
+{%block body%}
+{%include "bsc/verticalnav.html"%}
+<form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+{% include "chatgpteg/nav.html"%}
+{% endblock %}
